@@ -1,0 +1,53 @@
+.leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+  
+  /* Fake image */
+  .realimg{
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .about{
+    max-width: 100%;
+    margin: 1%;
+  }
+
+  /* Real image */
+
+/* .realimg{
+    display: inline-block;
+    border: 3px solid black;
+    margin: 1px;
+    object-fit: cover;
+} */
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media screen and (min-width: 800px) {
+    .leftcolumn {
+        float: left;
+        width: 75%;
+      }
+      
+      /* Right column */
+      .rightcolumn {
+        float: left;
+        width: 25%;
+        padding-left: 20px;
+      }
+  }

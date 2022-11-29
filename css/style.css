@@ -2,84 +2,64 @@
     box-sizing: border-box;
   }
   
-  body {
-    font-family: Arial;
-    padding: 20px;
-    background: #f1f1f1;
-  }
-  
-  /* Header/Blog Title */
-  header {
-    background: white;
-    
-  }
-
-  h1{
-    background-color: white;
-  }
-  
-  /* Create two unequal columns that floats next to each other */
-  /* Left column */
-  .leftcolumn {
-    float: left;
-    width: 75%;
-  }
-  
-  /* Right column */
-  .rightcolumn {
-    float: left;
-    width: 25%;
-    padding-left: 20px;
-  }
-  
-  /* Fake image */
-  .fakeimg{
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-  }
-
-  /* Real image */
-
-.realimg{
-    display: inline-block;
-    border: 3px solid black;
-    margin: 1px;
-    object-fit: cover;
+.header{
+  font-size: 50px;
+  color: navy;
+  border: solid navy 5px;
+  text-align: center;
+  background-color: lightgray;
+  padding: 10px;
+  margin: 10px 40px;
+  text-overflow: wrap;
 }
-  
-  /* Add a card effect for articles */
-  .card {
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Footer */
-  .footer {
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
-    margin-top: 20px;
-  }
-  
-  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {
-      width: 100%;
-      padding: 0;
-    }
-  }
-nav{
-  display: inline-block;
 
+body{
+  background-image: url('../images/mariners-generic-background.jpg');
+  overflow-x: hidden;
+  background-color: navy;
+  background-attachment: fixed;   
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  color: white;
+  font-family: Arial;
+  padding: 20px;
+}
+
+.about{
+  font-size: 20px;
+  max-width: 85%;
+  color: navy;
+  border: solid navy 5px;
+  text-align: left;
+  background-color: lightgray;
+  padding: 20px;
+  margin: 10px 40px;
+  border-radius: 7%;
+}
+
+footer{
+  font-size: 20px;
+  text-overflow:wrap;
+  text-align: center;
+  color: navy;
+  border: white solid 5px;
+  margin: 10px 0px;
+  width: 200%;
+  position: relative;
+  left: -50%;
+  height: 20%;
+  background-color: lightgray;
+  padding: 0% 50%;
+  border-radius: 7%;
+}
+
+header {
+  background: white;
+}
+
+h1{
+  background-color: white;
 }
 
 li, a{
@@ -92,16 +72,26 @@ border-radius: 10%;
 }
 
 a:hover{
-  transform: scale(1.2);
+transform: scale(1.2);
 }
 
 #title{
-  text-align: center;
-  font-size: 50px;
+text-align: center;
+font-size: 50px;
 }
 
-body{
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+@media screen and (prefers-reduced-motion: reduce){
+html{
+    scroll-behavior: auto; /* Removes scroll animation */
+}
+
+.skip a{
+  -webkit-transition: none; /* sets to default setting */
+  transition: none;        /* sets to default setting */
+ }
+
+/*Turn off parallax*/
+header{
+  background-attachment: initial;
+}
 }
