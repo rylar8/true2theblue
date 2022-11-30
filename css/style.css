@@ -1,17 +1,20 @@
 * {
     box-sizing: border-box;
+    word-wrap: break-word;
+  }
+
+  *:focus{
+    border: 2px solid black;
   }
   
-.header{
-  font-size: 50px;
-  color: navy;
-  border: solid navy 5px;
-  text-align: center;
-  background-color: lightgray;
-  padding: 10px;
-  margin: 10px 40px;
-  text-overflow: wrap;
-}
+  header{
+    border-bottom: 3px solid #50C7C7;
+    margin-bottom:20px;
+    background: white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
 body{
   background-image: url('../images/mariners-generic-background.jpg');
@@ -24,6 +27,9 @@ body{
   color: white;
   font-family: Arial;
   padding: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 16pt; 
 }
 
 .about{
@@ -54,30 +60,65 @@ footer{
   border-radius: 7%;
 }
 
-header {
-  background: white;
-}
-
 h1{
-  background-color: white;
-}
-
-li, a{
-background-color: lightgrey;
-padding: 5px;
-display: inline-block;
-margin: 5px;
-position: relative;
-border-radius: 10%;
+  font-size: 2em;
+  text-align: center;
+  line-height: 2;
 }
 
 a:hover{
 transform: scale(1.2);
 }
 
-#title{
-text-align: center;
-font-size: 50px;
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
+.nav_item a{
+  padding: 10px;
+}
+
+.nav_item a:hover, a:focus{
+  color: #50C7C7;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+
+#logo{
+  width: 475px;
+  animation: hw5_move 5s;
+}
+
+  #title{
+    color:teal;
+  }
+
+  nav a:visited{
+    color: blue;
+}
+.nav_links{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+@keyframes hw5_move{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 @media screen and (prefers-reduced-motion: reduce){
@@ -90,8 +131,23 @@ html{
   transition: none;        /* sets to default setting */
  }
 
+ #logo{
+  animation: none;
+}
+
 /*Turn off parallax*/
 header{
   background-attachment: initial;
 }
+}
+
+@media screen and (min-width: 900px){
+  header{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  .nav_links{
+      flex-direction: row;
+  }
 }

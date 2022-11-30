@@ -5,6 +5,17 @@
     border: navy 2px solid;
   }
   
+  .header{
+    font-size: 50px;
+    color: navy;
+    border: solid navy 5px;
+    text-align: center;
+    background-color: lightgray;
+    padding: 10px;
+    margin: 10px 40px;
+    text-overflow: wrap;
+  }
+
   .player > img{
     height: 75%;
     justify-content: center;
