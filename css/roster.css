@@ -1,0 +1,254 @@
+.player{
+    text-align: center;
+    background-color: teal;
+    border-radius: 15%;
+    border: navy 2px solid;
+  }
+  
+  .header{
+    font-size: 50px;
+    color: navy;
+    border: solid navy 5px;
+    text-align: center;
+    background-color: lightgray;
+    padding: 10px;
+    margin: 10px 40px;
+    text-overflow: wrap;
+  }
+
+  .player > img{
+    height: 75%;
+    justify-content: center;
+    border: navy 2px solid;
+    padding: 1px;
+    margin: 3px;
+    background-color: white;
+    border-radius: 15%;
+    max-width: 90%;
+  }
+  
+  .player > p{
+    color: white;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .roster-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    justify-content: center;
+    background-image: none;
+    background-color: none;
+    justify-items: center;
+    align-items: center;
+    border-radius: 2%;
+  }
+  
+  #mariners-logo{
+    display: none;
+  }
+  
+  #left-fielder{
+    grid-row: 6;
+  }
+  
+  #center-fielder{
+    grid-row: 3;
+  }
+  
+  #right-fielder{
+    grid-row: 1;
+  }
+  
+  #shortstop{
+    grid-row: 2;
+  }
+  
+  #second-baseman{
+    grid-row: 5;
+  }
+  
+  #third-baseman{
+    grid-row: 7;
+  }
+  
+  #pitcher{
+    grid-row: 10;
+  }
+  
+  #first-baseman{
+    grid-row: 8;
+  }
+  
+  #designated-hitter{
+    grid-row: 4;
+  }
+  
+  #catcher{
+    grid-row: 9;
+  }
+  
+  @media screen and (min-width: 400px){
+  
+    .roster-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      justify-content: center;
+      background-image: none;
+      background-color: none;
+      justify-items: center;
+      align-items: center;
+      border-radius: 2%;
+    }
+  
+    #mariners-logo{
+      display: none;
+    }
+  
+    #left-fielder{
+      grid-row: 3;
+      grid-column: 2;
+    }
+  
+    #center-fielder{
+      grid-row: 2;
+      grid-column: 1;
+    }
+  
+    #right-fielder{
+      grid-row: 1;
+      grid-column: 1;
+    }
+  
+    #shortstop{
+      grid-row: 1;
+      grid-column: 2;
+    }
+  
+    #second-baseman{
+      grid-row: 3;
+      grid-column: 1;
+    }
+  
+    #third-baseman{
+      grid-row: 4;
+      grid-column: 1;
+    }
+  
+    #pitcher{
+      grid-row: 5;
+      grid-column: 2;
+    }
+  
+    #first-baseman{
+      grid-row: 4;
+      grid-column: 2;
+    }
+  
+    #designated-hitter{
+      grid-row: 2;
+      grid-column: 2;
+    }
+  
+    #catcher{
+      grid-row: 5;
+      grid-column: 1;
+    }
+  }
+  
+  @media screen and (min-width: 800px){
+  
+    .roster-content {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(12, 100px);
+      justify-content: center;
+      background-image: url('..\\images\\baseball-field-background.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      justify-items: center;
+      align-items: center;
+      border-radius: 5%;
+    }
+  
+    #mariners-logo{
+      display: inline;
+      grid-row-start: 10;
+      grid-row-end: 12;
+      grid-column-start: 6;
+      grid-column-end: 7;
+    }
+  
+    #left-fielder{
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+  
+    #center-fielder{
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 4;
+      grid-column-end: 5;
+    }
+  
+    #right-fielder{
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 6;
+      grid-column-end: 7;
+    }
+  
+    #shortstop{
+      grid-row-start: 3;
+      grid-row-end: 5;
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+  
+    #second-baseman{
+      grid-row-start: 3;
+      grid-row-end: 5;
+      grid-column-start: 5;
+      grid-column-end: 6;
+    }
+  
+    #third-baseman{
+      grid-row-start: 6;
+      grid-row-end: 8;
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+  
+    #pitcher{
+      grid-row-start: 7;
+      grid-row-end: 9;
+      grid-column-start: 4;
+      grid-column-end: 5;
+    }
+  
+    #first-baseman{
+      grid-row-start: 6;
+      grid-row-end: 8;
+      grid-column-start: 6;
+      grid-column-end: 7;
+    }
+  
+    #designated-hitter{
+      grid-row-start: 10;
+      grid-row-end: 12;
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+  
+    #catcher{
+      grid-row-start: 10;
+      grid-row-end: 12;
+      grid-column-start: 4;
+      grid-column-end: 5;
+    }
+  }

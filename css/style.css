@@ -1,107 +1,153 @@
 * {
     box-sizing: border-box;
+    word-wrap: break-word;
+  }
+
+  *:focus{
+    border: 2px solid black;
   }
   
-  body {
-    font-family: Arial;
-    padding: 20px;
-    background: #f1f1f1;
-  }
-  
-  /* Header/Blog Title */
-  header {
+  header{
+    border-bottom: 3px solid #50C7C7;
+    margin-bottom:20px;
     background: white;
-    
+    display:flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  h1{
-    background-color: white;
-  }
-  
-  /* Create two unequal columns that floats next to each other */
-  /* Left column */
-  .leftcolumn {
-    float: left;
-    width: 75%;
-  }
-  
-  /* Right column */
-  .rightcolumn {
-    float: left;
-    width: 25%;
-    padding-left: 20px;
-  }
-  
-  /* Fake image */
-  .fakeimg{
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-  }
-
-  /* Real image */
-
-.realimg{
-    display: inline-block;
-    border: 3px solid black;
-    margin: 1px;
-    object-fit: cover;
-}
-  
-  /* Add a card effect for articles */
-  .card {
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Footer */
-  .footer {
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
-    margin-top: 20px;
-  }
-  
-  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {
-      width: 100%;
-      padding: 0;
-    }
-  }
-nav{
-  display: inline-block;
-
+body{
+  background-image: url('../images/mariners-generic-background.jpg');
+  overflow-x: hidden;
+  background-color: navy;
+  background-attachment: fixed;   
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  color: white;
+  font-family: Arial;
+  padding: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 16pt; 
 }
 
-li, a{
-background-color: lightgrey;
-padding: 5px;
-display: inline-block;
-margin: 5px;
-position: relative;
-border-radius: 10%;
+.about{
+  font-size: 20px;
+  max-width: 85%;
+  color: navy;
+  border: solid navy 5px;
+  text-align: left;
+  background-color: lightgray;
+  padding: 20px;
+  margin: 10px 40px;
+  border-radius: 7%;
+}
+
+footer{
+  font-size: 20px;
+  text-overflow:wrap;
+  text-align: center;
+  color: navy;
+  border: white solid 5px;
+  margin: 10px 0px;
+  width: 200%;
+  position: relative;
+  left: -50%;
+  height: 20%;
+  background-color: lightgray;
+  padding: 0% 50%;
+  border-radius: 7%;
+}
+
+h1{
+  font-size: 2em;
+  text-align: center;
+  line-height: 2;
 }
 
 a:hover{
-  transform: scale(1.2);
+transform: scale(1.2);
 }
 
-#title{
-  text-align: center;
-  font-size: 50px;
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
 }
 
-body{
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
+.nav_item a{
+  padding: 10px;
+}
+
+.nav_item a:hover, a:focus{
+  color: #50C7C7;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+
+#logo{
+  width: 475px;
+  animation: hw5_move 5s;
+}
+
+  #title{
+    color:teal;
+  }
+
+  nav a:visited{
+    color: blue;
+}
+.nav_links{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+@keyframes hw5_move{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+html{
+    scroll-behavior: auto; /* Removes scroll animation */
+}
+
+.skip a{
+  -webkit-transition: none; /* sets to default setting */
+  transition: none;        /* sets to default setting */
+ }
+
+ #logo{
+  animation: none;
+}
+
+/*Turn off parallax*/
+header{
+  background-attachment: initial;
+}
+}
+
+@media screen and (min-width: 900px){
+  header{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  .nav_links{
+      flex-direction: row;
+  }
 }

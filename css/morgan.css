@@ -1,0 +1,182 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16pt; 
+}
+  header{
+    background: #fff;
+    border-bottom: 3px solid #50C7C7;
+    margin-bottom:20px;
+  }
+  
+  h1{
+    font-size: 2em;
+    text-align: center;
+    line-height: 2;
+  }
+  
+  
+  p {
+    padding: 0 30px;
+  }
+  
+  a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  
+  a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+  }
+  
+  *:focus{
+    border: 2px solid black;
+  }
+
+
+  .nav_item a{
+    padding: 10px;
+  }
+  
+  .nav_item a:hover, a:focus{
+    color: #50C7C7;
+    text-decoration: underline;
+    -webkit-text-decoration-style: dotted;
+            text-decoration-style: dotted;
+  }
+  
+  #logo{
+    width: 475px;
+    animation: hw5_move 5s;
+}
+#title{
+  color:teal;
+  
+}
+
+.aboutImages{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+figcaption{
+  text-align: center;
+}
+figure{
+  border: solid teal 2px;
+  border-radius: 20px;
+}
+figure img{ 
+  
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.aboutP{
+  border: solid 2px teal;
+  text-align:center;
+  border-radius: 20px;
+  margin: 70px;
+}
+.moments{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+  align-content: space-around;
+  row-gap: 70px;
+  margin-top:20px;
+}
+.vid{
+  border: 2px teal solid;
+  text-align: center;
+
+}
+
+.bbbb{
+  position: relative;
+  width:100%;
+  height:600px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.bbbb h2{
+  position:absolute;
+  text-align:center;
+  font-size:2rem;
+  font-weight: bold;
+  padding:20px;
+  margin:15px;
+  z-index:1;
+  left:40px;
+  bottom:100px;
+  color:white;
+}
+
+@keyframes hw5_move{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+body{
+    font-family: poppins, serif;
+    background-color: #f1f1f1;
+}
+
+header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav a:visited{
+    color: blue;
+}
+.nav_links{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#momentsback, .bbbb{
+  background-color: teal;
+}
+@media screen and (min-width: 400px){
+  .bbbb h2{
+    font-size:3rem;
+  }
+}
+
+
+@media screen and (min-width: 800px){
+    header{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav_links{
+        flex-direction: row;
+    }
+    .bbbb h2{
+      font-size:5rem;
+    }
+}
+
+@media (preffered-reduced-motion: reduced){
+    #logo{
+        animation: none;
+    }
+
+}
+  

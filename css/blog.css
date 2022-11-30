@@ -1,0 +1,65 @@
+body{
+    background-image: url('../images/tmobile.webp');
+}
+
+.header{
+    font-size: 50px;
+    color: navy;
+    border: solid navy 5px;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    margin: 10px 40px;
+    text-overflow: wrap;
+  }
+
+.leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+
+  .about{
+    max-width: 100%;
+    margin: 1%;
+    border-radius: 0%;
+  }
+
+  /* Real image */
+
+.realimg{
+    background-color: teal;
+    display: inline-block;
+    border: 3px solid navy;
+    margin: 3px;
+    padding: 3px;
+    object-fit: cover;
+    color: white;
+}
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media screen and (min-width: 800px) {
+    .leftcolumn {
+        float: left;
+        width: 75%;
+      }
+      
+      /* Right column */
+      .rightcolumn {
+        float: left;
+        width: 25%;
+        padding-left: 20px;
+      }
+  }
