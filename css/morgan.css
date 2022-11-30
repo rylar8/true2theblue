@@ -3,6 +3,21 @@ body{
     padding: 0;
     font-size: 16pt; 
 }
+footer{
+  font-size: 20px;
+  text-overflow:wrap;
+  text-align: center;
+  color: navy;
+  border: white solid 5px;
+  margin: 10px 0px;
+  width: 200%;
+  position: relative;
+  left: -50%;
+  height: 20%;
+  background-color: lightgray;
+  padding: 0% 50%;
+  border-radius: 7%;
+}
   header{
     background: #fff;
     border-bottom: 3px solid #50C7C7;
