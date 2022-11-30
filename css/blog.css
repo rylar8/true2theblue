@@ -1,28 +1,40 @@
+body{
+    background-image: url('../images/tmobile.webp');
+}
+
+.header{
+    font-size: 50px;
+    color: navy;
+    border: solid navy 5px;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    margin: 10px 40px;
+    text-overflow: wrap;
+  }
+
 .leftcolumn, .rightcolumn {
     width: 100%;
     padding: 0;
-  }
-  
-  /* Fake image */
-  .realimg{
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
   }
 
   .about{
     max-width: 100%;
     margin: 1%;
+    border-radius: 0%;
   }
 
   /* Real image */
 
-/* .realimg{
+.realimg{
+    background-color: teal;
     display: inline-block;
-    border: 3px solid black;
-    margin: 1px;
+    border: 3px solid navy;
+    margin: 3px;
+    padding: 3px;
     object-fit: cover;
-} */
+    color: white;
+}
   
   /* Add a card effect for articles */
   .card {
