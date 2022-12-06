@@ -89,6 +89,7 @@ a.skip:focus{
 
 .nav_item a{
   padding: 10px;
+  color: #50C7C7;
 }
 
 .nav_item a:hover, a:focus{
@@ -96,6 +97,11 @@ a.skip:focus{
   text-decoration: underline;
   -webkit-text-decoration-style: dotted;
           text-decoration-style: dotted;
+}
+
+.active{
+  color:blue;
+  text-emphasis: bold;
 }
 
 #logo{
