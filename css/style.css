@@ -99,8 +99,8 @@ a.skip:focus{
           text-decoration-style: dotted;
 }
 
-.active{
-  color:blue;
+.nav_links > .active > a{
+  background-color:lightblue;
   text-emphasis: bold;
 }
 
@@ -145,7 +145,13 @@ html{
 header{
   background-attachment: initial;
 }
+#background-video{
+  display: none;
 }
+}
+
+
+
 
 @media screen and (min-width: 900px){
   header{

@@ -1,87 +1,29 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-size: 16pt; 
-}
-footer{
-  font-size: 20px;
-  text-overflow:wrap;
-  text-align: center;
-  color: navy;
-  border: white solid 5px;
-  margin: 10px 0px;
-  width: 200%;
-  position: relative;
-  left: -50%;
-  height: 20%;
-  background-color: lightgray;
-  padding: 0% 50%;
-  border-radius: 7%;
-}
-  header{
-    background: #fff;
-    border-bottom: 3px solid #50C7C7;
-    margin-bottom:20px;
-  }
-  
-  h1{
-    font-size: 2em;
-    text-align: center;
-    line-height: 2;
-  }
-  
-  
-  p {
-    padding: 0 30px;
-  }
-  
-  a.skip{
-    background: white;
-    left: 0;
-    padding: 6px;
-    position: absolute;
-    top: -40px;
-    -webkit-transition: top 1s ease-out;
-    transition: top 1s ease-out;
-    z-index: 1;
-  }
-  
-  a.skip:focus{
-    top:20px;
-    color: black;
-    text-decoration-style: solid;
-  }
-  
-  *:focus{
-    border: 2px solid black;
-  }
 
 
-  .nav_item a{
-    padding: 10px;
-  }
-  
-  .nav_item a:hover, a:focus{
-    color: #50C7C7;
-    text-decoration: underline;
-    -webkit-text-decoration-style: dotted;
-            text-decoration-style: dotted;
-  }
-  
-  #logo{
-    width: 475px;
-    animation: hw5_move 5s;
+
+
+
+
+p {
+  padding: 0 30px;
 }
+
+
+
+
+
 #title{
   color:teal;
   
 }
 
 .aboutImages{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:space-around;
   align-items: center;
-  justify-items: center;
+  align-content: space-around;
 }
 figcaption{
   text-align: center;
@@ -145,25 +87,10 @@ figure img{
     100% { opacity: 1; }
 }
 
-body{
-    font-family: poppins, serif;
-    background-color: #f1f1f1;
-}
 
-header{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-nav a:visited{
-    color: blue;
-}
-.nav_links{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
+
+
 #momentsback, .bbbb{
   background-color: teal;
 }
@@ -175,23 +102,10 @@ nav a:visited{
 
 
 @media screen and (min-width: 800px){
-    header{
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .nav_links{
-        flex-direction: row;
-    }
     .bbbb h2{
       font-size:5rem;
     }
 }
 
-@media (preffered-reduced-motion: reduced){
-    #logo{
-        animation: none;
-    }
 
-}
   
